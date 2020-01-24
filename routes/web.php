@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/categories', 'PagesController@types');
+
+Route::resource('/posts','PostsController');
 
 Auth::routes();
 

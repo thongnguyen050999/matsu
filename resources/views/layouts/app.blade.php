@@ -26,20 +26,71 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
 	<link rel="stylesheet" href="{{asset('css/linericon/style.css')}}">
-	<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{asset('css/owl-carousel/owl.carousel.min.css')}}">
 	<link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
 	<link rel="stylesheet" href="{{asset('css/nice-select/css/nice-select.css')}}">
 	<!-- main css -->
 	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.css" rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		h1,h2,h3,h4,h5,h6
+		{
+			font-family: Rubik, sans-serif;
+			font-weight: bold;
+		}
+
+		a,.col
+		{
+			font-family: Rubik, sans-serif;
+
+		}
+	</style>
 </head>
-<body>
+<body style="background: url('{{asset('storage/images/body-bg.png')}}') no-repeat center;">
     <div id="app">
-        @include('inc.navbar')
-        <br><br><br><br><br><br>
-        <div class="container">
-            @yield('content')
-        </div>
-    </div>
+		@include('inc.navbar')
+        @yield('content')
+	</div>
+	
+	
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="{{asset('js/popper.js')}}"></script>
+	<script src="{{asset('js/bootstrap.min.js')}}"></script>
+	<script src="{{asset('js/stellar.js')}}"></script>
+	<script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
+	<script src="{{asset('js/nice-select/js/jquery.nice-select.min.js')}}"></script>
+	<script src="{{asset('js/isotope/imagesloaded.pkgd.min.js')}}"></script>
+	<script src="{{asset('js/isotope/isotope-min.js')}}"></script>
+	<script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
+	<script src="{{asset('js/jquery.ajaxchimp.min.js')}}"></script>
+	<script src="{{asset('js/mail-script.js')}}"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="{{asset('js/gmaps.min.js')}}"></script>
+    <script src="{{asset('js/theme.js')}}"></script>
+	<script src="https://use.fontawesome.com/569b79e629.js"></script>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
+	
+
+	<script>
+		$(document).ready(function() {
+
+			$('#summernote').summernote({
+				height: 300,                 // set editor height
+				minHeight: null,             // set minimum height of editor
+				maxHeight: null,             // set maximum height of editor
+				focus: true                  // set focus to editable area after initializing summernote
+			});
+			$('.dropdown-toggle').dropdown();
+		});
+	</script>
+
+	
 </body>
 </html>
